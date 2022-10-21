@@ -1,0 +1,3 @@
+all:
+	gcc -shared -fpic hw8-Mason_Motschke-4.c ./hw8-lib-Mason_Motschke.so
+	gcc hw8-Mason_Motschke-4.c -ldl

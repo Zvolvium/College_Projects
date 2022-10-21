@@ -1,0 +1,10 @@
+Program# 1
+
+Write a program to create a class called 'Student' with String variable 'name' -
+  and integer variable 'roll_no'.
+
+Assign the value of roll_no as '2' and that of name as "John" by -
+  creating an object of the class Student.
+  
+Assign and print the roll number of two students having -
+  names "Sam" and "John" respectively by creating two objects of class 'Student'.

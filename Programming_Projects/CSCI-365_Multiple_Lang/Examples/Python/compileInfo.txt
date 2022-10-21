@@ -1,0 +1,17 @@
+Python 2
+Implements Python 2.7.9
+
+To run a Python 2 program
+python sourceFile.py
+
+
+Python 3
+Implements Python 3.4.3
+
+To run a Python 3 program
+python3.4 sourceFile.py
+
+
+
+
+

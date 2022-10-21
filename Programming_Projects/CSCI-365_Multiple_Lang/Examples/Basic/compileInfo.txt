@@ -1,0 +1,10 @@
+Bywater BASIC Interpreter 2.2
+Implements subset of ANSI Standard for full BASIC
+
+To run BASIC program
+bwbasic helloWorld.bas
+
+To run a program interactively
+bwbasic
+
+

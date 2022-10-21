@@ -1,0 +1,22 @@
+GCC Ada
+Implements Ada
+
+To compile an Ada program
+
+gcc -c filename.adb
+** creates the output files filename.o and filename.ali **
+
+gnatbind filename
+** creates even more files **
+gnatlink filename
+** creates the executable file filename and removes the extra files created by gnatbind **
+
+or to do it in one step
+
+gnatmake filename.adb
+** creates the executable file filename **
+
+To run an Ada program
+./filename
+
+After compilation the *.o and *.ali files can be deleted

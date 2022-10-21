@@ -1,0 +1,72 @@
+// Mason Motschke - CSCI_370 - HW10
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int decimalToBinary(int decimal, int array[]){
+  int index = 1, remainder; array[0] = -1;
+  if (decimal == 0){ array[1] = 0; return index; }
+  while (decimal != 0){
+    remainder = decimal % 2; array[index] = remainder;
+    index++; decimal = decimal / 2;
+  } return index;
+}
+
+void getMemLocations(int array[]){ // Updates original Array
+  int memoryLocation;
+  for (int i = 0; i < 500; i++){
+    memoryLocation = (rand() % 65536);
+    array[i] = memoryLocation;
+  }
+}
+
+int main(void){
+  // Initialize Vars
+  int binary[100], decimal = 0, Miss = 0, memLocal[500], memoryLocation; srand(2001);
+  for (int i = 0; i < 100; i++){ binary[i] = 0; } // Initialize binary array
+
+  // --------------------------- Begin Program -----------------------------------------
+  printf("\n -- Starting Fully Associative CACHE -- \n");
+
+  // Creates 500 random memory locations using personal seed
+  getMemLocations(memLocal);
+  //for (int i = 0; i < 500; i++){ printf("Memory Location: %d\n", memLocal[i]); }
+  char binaryString[101][101];
+  // Convert memLocations to binary
+  for (int i = 0; i < 500; i++){
+    int index = decimalToBinary(memLocal[i], binary); printf("Mem: %d; Binary: ", memLocal[i]);
+    for (int j = 0; j < 100; j++){ binary[j] = 0; }
+  }
+
+  int FullAss[128][32]; // Creates simulated cache of 128 lines w/ 32 words each
+  
+/*
+  // Test for Decimal to Binary conversion
+  printf(" - Decimal to Binary Test\n");
+  for (int i = 0; i < 500; i++){
+    for (int x = 0; x < 100; x++){ binary[x] = 0; }
+    int index = decimalToBinary(decimal, binary);
+    for (int j = index; binary[j] != -1; j--){
+      printf("%d", binary[j]);
+    } printf("\n"); decimal++;
+  }
+*/
+  printf("  - Fully Associative Miss Ratio (percent): %0.5f\n", 100.0*((float)Miss/500.0));
+  printf(" -- Ending Fully Associative -- \n\n");
+
+  printf(" -- Starting Direct Mapped CACHE -- \n"); Miss = 0;
+  int DirectMap[128][32]; getMemLocations(memLocal);
+  printf("  - Direct Mapped Miss Ratio (percent): %0.5f\n", 100.0*((float)Miss/500.0));
+  printf(" -- Ending Direct Mapped -- \n\n");
+
+  printf(" -- Starting 2-way Set Associative CACHE -- \n"); Miss = 0;
+  printf("  - 2-way Set Associative Miss Ratio (percent): %0.5f\n", 100.0*((float)Miss/500.0));
+  printf(" -- Ending 2-way -- \n\n");
+
+  printf(" -- Starting 4-way Set Associative CACHE --  \n"); Miss = 0;
+  printf("  - 4-way Set Associative Miss Ratio (percent): %0.5f\n", 100.0*((float)Miss/500.0));
+  printf(" -- Ending 4-way -- \n\n");
+
+  return 0;
+}

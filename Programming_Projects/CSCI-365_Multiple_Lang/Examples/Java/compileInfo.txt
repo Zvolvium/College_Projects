@@ -1,0 +1,12 @@
+Sun (Oracle) Java 1.8.0_45
+Implements Java 6
+
+To compile a Java program
+javac sourceFile.java
+** creates the output file sourceFile.class **
+
+To run a java program
+java sourceFile.class
+
+
+

@@ -1,0 +1,97 @@
+V "GNAT Lib v9"
+M P W=b
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U main%b		prog2aMAM.adb		1572959f NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-flteio.ads		20200312110721 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiflio.ads		20200312110721 56fbda09 ada.text_io.float_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D prog2aMAM.adb		20220215210217 8aaee8c1 main%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-imgboo.ads		20200312110721 f5d971eb system.img_bool%s
+D s-imgint.ads		20200312110721 02dbe0c2 system.img_int%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-valint.ads		20200312110721 48a52a3f system.val_int%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 14|4r6 4r19 4r40 5r5 5r18 93r30 95r30 97r30
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 14|4w44 93r34 95r34 97r34
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 14|4w23 5r22
+X 8 a-textio.ads
+49K13*Text_IO 471e16 14|4w10 5r9
+166U14*New_Line 14|32s15 56s36 63s3 67s56 69s56 71s56 74s59 76s59 78s59 83s23
+. 86s59 88s59 90s59 93s68 95s68 97s68
+242U14*Put 14|27s5 27s20 27s45 31s7 31s40 60s5 67s3 67s31 69s3 69s31 71s3
+. 71s31 74s3 74s33 76s3 76s33 78s3 78s33 86s3 86s33 88s3 88s33 90s3 90s33
+. 93s3 95s3 97s3
+256V13*Get_Line{string} 14|61s30
+263U14*Put_Line 14|56s3 58s3 80s3 99s3
+X 9 a-tiflio.ads
+68U14*Put 14|93s48[3|20] 95s48[3|20] 97s48[3|20]
+X 14 prog2aMAM.adb
+7U11*main 7b11 100l5 100t9
+8A8 Arraytype(integer)<integer> 9r10 10r10 11r10 15r41 25r45 35r40 45r32
+9a3 arr1{8A8} 66r27 73r27 81m16 81r16 85r27 92r18
+10a3 arr2{8A8} 68r27 75r27 82m16 82r16 87r27 94r18
+11a3 arr3{8A8} 61m5 70r27 77r27 83m16 83r16 89r27 96r18
+12i3 cnt{integer} 19m9 19r16 22r12 66m3 67r49 67m69 68m3 69r49 69m69 70m3
+. 71r49 71m69
+12f23 avg{float} 92m3 93r52 93m81 94m3 95r52 95m81 96m3 97r52
+12b44 bool{boolean} 73m3 74r51 74m72 75m3 76r51 76m72 77m3 78r51 78m72 85m3
+. 86r51 86m72 87m3 88r51 88m72 89m3 90r51
+13i3 num{integer} 27r38 28m5 28r12
+15V12 Count70OrGreater{integer} 15b12 15>30 23l7 23t23 66s10 68s10 70s10
+15a30 theArray{8A8} 17r14
+17i9 i=17:14{integer} 18r11
+25U13 UpdateScores 25b13 25=27 33l7 33t19 81s3 82s3 83s3
+25a27 theArray{8A8} 29r20 30m7 30r22 31r25
+29i9 i{integer} 30r16 30r31 31r34
+35V12 HasPerfectScore{boolean} 35b12 35>29 43l7 43t22 73s11 75s11 77s11 85s11
+. 87s11 89s11
+35a29 theArray{8A8} 37r14
+37i9 c=37:14{integer} 38r11
+45V12 Average{float} 45b12 45>21 53l7 53t14 92s10 94s10 96s10
+45a21 theArray{8A8} 48r14 51r22
+46f5 x{float} 49m7 49r12 51r12 51m40
+46f8 z{float} 51m7 52r12
+48i9 i=48:14{integer} 49r22
+59i7 x{integer} 61r10
+

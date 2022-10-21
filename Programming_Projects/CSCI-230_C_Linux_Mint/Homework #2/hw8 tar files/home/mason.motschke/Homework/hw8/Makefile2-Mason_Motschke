@@ -1,0 +1,9 @@
+all: hw8-list-Mason_Motschke.o hw8-tree-Mason_Motschke.o
+	ar rcs hw8-lib-Mason_Motschke.a hw8-list-Mason_Motschke.o hw8-tree-Mason_Motschke.o
+	gcc -static hw8-Mason_Motschke.c ./hw8-lib-Mason_Motschke.a
+
+hw8-list-Mason_Motschke.o: hw8-list-Mason_Motschke.c
+	gcc -static -c hw8-list-Mason_Motschke.c
+
+hw8-tree-Mason_Motschke.o: hw8-tree-Mason_Motschke.c
+	gcc -static -c hw8-tree-Mason_Motschke.c

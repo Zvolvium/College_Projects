@@ -1,0 +1,26 @@
+Program# 3
+
+Write a program to create and test the Account class. The Account class models a bank account of a
+    customer, and it is designed as follows:
+        • The class has three instance variables:
+            o Id, a String identifying uniquely the account
+            o Name, a String representing the name of the account owner
+            o Balance, an int representing the available amount in the account
+        • The class has three methods:
+            o The method credit(amount), which adds amount to balance and returns balance.
+            o The method debit(amount), which subtracts the given amount from balance if amount <=
+                balance, otherwise, it prints "amount exceeds the available balance”. The method returns balance.
+            o The method transferTo(anotherAccount, amount) transfers the given amount from this
+                Account to the given anotherAccount if amount <= balance, otherwise, it prints “amount
+                exceeds balance”. The method returns balance.
+            
+1. Write two constructors for the class Account. The first one takes in two arguments, and the
+    second one has three arguments, Account(id, name), and Account(id, name, balance).
+
+2. Write the three getters for each instance variable, getID(), getName(), and getBalance().
+
+3. Implement the three methods credit(amount), debit(amount), and transferTo(anotherAccount,
+    amount).
+
+4. Test your class in the main program by creating two objects for the class account and testing all
+    the above methods.

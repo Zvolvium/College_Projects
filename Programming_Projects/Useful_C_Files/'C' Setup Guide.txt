@@ -1,0 +1,67 @@
+'C' Setup Guide - 
+
+Startup:
+	Must haves - '#include <stdlib.h>' and '#include <stdio.h>'
+	 - Links basic Files/Libraries into instance
+
+Variables:
+	Variables must be declared before they can be defined
+	 - Declared var: 'int x;'
+	 - Defined var:  'x = 10;'
+	 - Variables can be declared + defined in same line {All Types}            R#1
+		 - EX: 'int x = 10;'
+	 - Can also be stacked with others to shorten declaration {All Types}      R#2
+		 - EX: [Before 'int x; int y; int z;'] and [After 'int x, y, z;']
+	 - R#1 + R#2 EX: 'int x, y, z; x = y = z = 10;' Sets all to '10' easily
+
+	Variable Types
+	 - Integers: 'int x;' Range: [-32,768 to 32,768] or [-2,147,483,648 to 2,147,483,647]
+		 - Depends on Storage Size
+
+	 - Strings/ Characters: 'char name["Some Number"]'
+		 - Number defines how many characters are in string
+			 - EX: "Tuesday" = length 7 so 'char weekDay[8]' would be needed
+		 - Must be [length + 1] to account for ending char (Null Char)
+
+	 - Long Int: 'long x;' Range: [-9223372036854775808 to 9223372036854775807]
+
+	 - Decimals/ Floats: 'float x;'
+
+	Pointers {Reveiw how pointers work}
+	 - Can be used with most Variables Types
+		 - Created during variable declaration
+			 - Common to set size of memory (!!Must manually free from memory!!)
+			 - Free memory: free("variable");
+			 - Allocate Memory: malloc/ calloc {!Look it up!}
+		 - EX: 'int *x;' * = star/ multiplication symbol
+
+Functions:
+	Basic
+	 - Functions must be told what they will return during declaration + inputs
+		 - EX: 'int main (void)'
+	 | 'int': returns integer
+	 | 'float': returns float/ decimal
+	 | 'char': returns char
+	 | 'void': returns nothing {Used for both return and input declaration}
+
+	EX Function:
+		int main (void){ return 0; }: Returns 'int' and takes no input
+		void function (void){ return }: Returns nothing and takes nothing
+		int function (int x){ return 0; }: Returns 'int' and takes 'int x' as input
+
+	Main Function + Comments!!!
+		int main (void){
+		   // Random code - single line comment syntax
+		   /* Multi-line comment syntax */
+		   return 0;
+		}:
+	 - Runs automatically on code execution
+
+Structures:
+	Also called classes by other languages
+
+	Syntax:
+		'struct name { char var1; int var2; float var3; int *pointer1;};'
+
+	 - Any amount of variables inside
+	 - Useful for Linked Lists, Trees, etc...

@@ -1,0 +1,11 @@
+Given Directions:
+    Java program to find the sum of positive numbers.
+    
+Directions found by the students after contacting teacher:
+    Sum user inputed numbers until user enters a negative - 
+    print sum. 
+    
+Directions found after my inQuery: 
+    Get input from user until they stop: set stop condition as you see fit. - 
+        Only sum up positive numbers, and if user enters a negative number, - 
+        it shouldn't be summed.

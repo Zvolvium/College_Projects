@@ -1,0 +1,2 @@
+hamburger:9.95
+fries:6.0

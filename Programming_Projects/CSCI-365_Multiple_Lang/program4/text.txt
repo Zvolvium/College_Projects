@@ -1,0 +1,7 @@
+var c
+c = a + b - 3
+print ( c )
+y
+t = p * c
+yellow
+ var bluebird = 10 + z

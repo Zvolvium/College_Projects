@@ -1,0 +1,16 @@
+GNU Fortran 4.9.2
+Implements Fortran 95
+
+To compile a Fortran 95 program
+gfortran sourceFile.for 
+** creates the output file a.out **
+
+gfortran sourceFile.for -o executableFile
+** creates the output file executableFile **
+
+To run a Fortran 95 program
+./a.out
+or
+./executableFile
+
+

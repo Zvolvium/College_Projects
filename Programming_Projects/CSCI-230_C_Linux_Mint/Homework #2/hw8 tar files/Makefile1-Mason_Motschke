@@ -1,0 +1,2 @@
+all:
+	gcc hw8-Mason_Motschke.c hw8-list-Mason_Motschke.c hw8-tree-Mason_Motschke.c

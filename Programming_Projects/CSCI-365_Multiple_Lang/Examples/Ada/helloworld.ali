@@ -1,0 +1,44 @@
+V "GNAT Lib v8"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U helloworld%b		helloworld.adb		c9c6c089 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20200304083000 76789da1 ada%s
+D a-except.ads		20200304083000 291912d5 ada.exceptions%s
+D a-ioexce.ads		20200304083000 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200304083000 119b8fb3 ada.streams%s
+D a-tags.ads		20200304083000 491b781d ada.tags%s
+D a-textio.ads		20200304083000 881db35a ada.text_io%s
+D a-unccon.ads		20200304083000 0e9b276f ada.unchecked_conversion%s
+D helloworld.adb	20191204221656 41db73d3 helloworld%b
+D interfac.ads		20200304083000 5ab55268 interfaces%s
+D i-cstrea.ads		20200304083000 e53d8b8e interfaces.c_streams%s
+D system.ads		20200304083000 4635ec04 system%s
+D s-crtl.ads		20200304083000 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200304083000 54135002 system.exception_table%s
+D s-ficobl.ads		20200304083000 078245e4 system.file_control_block%s
+D s-parame.ads		20200304083000 f896c45c system.parameters%s
+D s-secsta.ads		20200304083000 283dec34 system.secondary_stack%s
+D s-soflin.ads		20200304083000 a7318a92 system.soft_links%s
+D s-stache.ads		20200304083000 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200304083000 09bd3940 system.standard_library%s
+D s-stoele.ads		20200304083000 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200304083000 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200304083000 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200304083000 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 8|1r6 1r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 8|1w10 1r27
+263U14*Put_Line 8|7s7 11s4
+X 8 helloworld.adb
+3U11*helloworld 3b11 13l5 13t15
+5U14 PrintHelloWorld 5b14 8l8 8t23 12s4
+

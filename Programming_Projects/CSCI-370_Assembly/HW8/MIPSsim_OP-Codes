@@ -1,0 +1,49 @@
+/*****************************************************/
+/* MIPS SIMULATOR                                    */
+/* Ronald Marsh (C) 2022                             */
+/*---------------------------------------------------*/
+/* R TYPE OPERAND CODE:                              */
+/* 000000 -> R type                                  */
+/* R TYPE FUNCTION CODES:                            */
+/* 000000 -> AND                                     */
+/* 000001 -> OR                                      */
+/* 000010 -> XOR                                     */
+/* 000101 -> ADD                                     */
+/* 000110 -> SUBTRACT                                */
+/* 000111 -> SET ON LESS THAN                        */
+/* 001000 -> SET ON EQUAL                            */
+/* 001001 -> SHIFT LEFT                              */
+/* 001010 -> SHIFT RIGHT                             */
+/*                                                   */
+/* J TYPE OPERAND CODES                              */
+/* 000010 -> JUMP                                    */
+/* 000011 -> EXIT                                    */
+/* 000100 -> NOOP (To enter comments)                */
+/* Note: There are no J-type function codes.         */
+/*                                                   */
+/* I TYPE OPERAND CODES                              */
+/* 010000 -> BRANCH ON EQUAL                         */
+/* 010001 -> BRANCH ON NOT EQUAL                     */
+/* 010010 -> BRANCH ON LESS THAN                     */
+/* 010011 -> BRANCH ON GREATER THAN                  */
+/* 010100 -> LOAD A BYTE FROM RAM                    */
+/* 010101 -> SAVE A BYTE TO RAM                      */
+/* 010110 -> ADD A CONSTANT (ADD IMMEDIATE)          */
+/* 010111 -> AND A CONSTANT (AND IMMEDIATE)          */
+/* 011000 -> OR A CONSTANT (OR IMMEDIATE)            */
+/* 011001 -> XOR A CONSTANT (OR IMMEDIATE)           */
+/* Note: There are no I-type function codes.         */
+/*                                                   */
+/* REGISTER ADDRESSES                                */
+/* 00000  -> REG[0]                                  */
+/* 00001  -> REG[1]                                  */
+/* 00010  -> REG[2]                                  */
+/* 00011  -> REG[3]                                  */
+/* 00100  -> REG[4]                                  */
+/* 00101  -> REG[5] Reads a byte from keyboard       */
+/* 00110  -> REG[6] Writes a byte to screen          */
+/*                                                   */
+/* RAM ADDRESSES                                     */
+/* 00000000 -> Base address (RAM[0])                 */
+/* 01100011 -> Max address (RAM[99])                 */
+/*****************************************************/

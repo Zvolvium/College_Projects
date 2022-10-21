@@ -1,0 +1,25 @@
+HW-7		CS370	20 points	Due: Monday, 3/21/2022
+
+Use my MIPS simulator to write a program that displays your name (first
+and last) on the screen. Your name must use uppercase for the first letters
+of your first and and last name. You must have a space between the names.
+For example:
+
+Ronald Marsh
+
+Notes:
+You must load the ascii values into RAM and then display the contents of the
+RAM. This is how you will display your name.
+
+You must also hold for a key press before terminating the program. 
+
+You cannot change the MIPSsim code in anyway.
+
+You can compile MIPSsim.c using gcc MIPSsim.c
+
+REQUIREMENTS:
+-------------
+1. Your program must run on the Linux Mint machines in Engineering.
+3. Your source code must be named hw7-yourname.mips
+4. Your source MUST excute using the MIPSsim program (./MIPSsim hw7-yourname.mips). 
+5. Failure to follow the above directions will result in loss of points.

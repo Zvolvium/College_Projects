@@ -1,0 +1,35 @@
+HW-9		CS370	10 points	Due: Monday, 4/4/2022
+
+Use my MIPS simulator to write a program that calculates ODD parity 
+on the bit string entered. Your code must prompt for 8 bits (0 / 1):
+
+Please enter a bit:
+Please enter a bit:
+Please enter a bit:
+.
+.
+.
+Please enter a bit:
+
+Your code must then count up the number of 1's and set the ninth bit
+such that the final number of 1's is ODD.
+
+Your code must then redisplay the 8 bits on a single line with the
+parity bit on the next line:
+
+10101010
+1
+
+Notes:
+You must also hold for a key press before terminating the program. 
+
+You cannot change the MIPSsim code in anyway.
+
+You can compile MIPSsim.c using gcc MIPSsim.c
+
+REQUIREMENTS:
+-------------
+1. Your program must run on the Linux Mint machines in Engineering.
+3. Your source code must be named hw9-yourname.mips
+4. Your source MUST excute using the MIPSsim program (./MIPSsim hw9-yourname.mips). 
+5. Failure to follow the above directions will result in loss of points.

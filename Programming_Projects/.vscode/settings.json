@@ -1,0 +1,8 @@
+{
+  "python.pythonPath": "C:\\Users\\Mason Motschke\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+  "java.project.sourcePaths": [
+    "Java/helloWorld/src",
+    "Java/converted_python_programs/src",
+    "CSCI_280_Java/Final_Project_Calculator"
+  ]
+}

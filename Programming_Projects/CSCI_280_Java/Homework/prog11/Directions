@@ -1,0 +1,53 @@
+Program #11
+Write a java program to model students and teachers. We can define a superclass called Person to store
+common properties such as name and address, and subclasses Student and Teacher for their specific
+properties.
+For the superclass Person:
+• The class has two instance string variables, name and address.
+• Write a constructor that takes in two arguments, name and address.
+• Write the two getters for each instance variable, getName() and getAddress().
+• Write the two setters for each instance variable, setName(name) and setAddress(name).
+For students, we need to maintain the courses taken and their respective grades; add a course with grade,
+print all courses taken and the average grade. Assume that a student takes no more than 30 courses for the
+entire program.
+For the subclass Student (subclass of Person):
+• The class has three specific instance variables
+o numCourses, an integer identifying the number of courses taken so far
+o courses, an array of strings identifying the course codes
+o grades, an array of integers identifying the grades for the corresponding course codes
+• Write a constructor that takes in two arguments, name and address, and initialize the remaining
+arguments.
+• The class has three methods:
+o The method addCourseGrade(course, grade), which adds a course and its grade.
+o The method printGrades(), which prints all courses taken and their grade.
+o The method getAverageGrade(), which computes the average grade. The method returns
+the computed average.
+For teachers, we need to maintain the courses taught currently, and be able to add or remove a course
+taught. Assume that a teacher teaches not more than 5 courses concurrently.
+For the subclass Teacher (subclass of Person):
+• The class has two specific instance variables
+o numCourses, an integer identifying the number of courses currently taught
+o courses, an array of strings identifying the course codes
+• Write a constructor that takes in two arguments, name and address, and initialize the remaining
+arguments.
+• The class has three methods:
+o The method addCourse(course), which adds a course. Returns false if the course has
+already existed. Returns true if the course was found and was added to the course list.
+o The method removeCourse(course), which removes a course. Returns false if the course
+cannot be found in the course list. If the course is found, removes the course and rearrange the courses array, and returns true.
+1. Implement the above-described classes and their methods.
+2. Test the implemented classes, Student and Teacher by creating objects in the main program and
+testing all the above methods.
+a. Testing the Student class:
+i. Create one object Student.
+ii. Add two courses to the student object.
+iii. Print the grades of the object.
+iv. Print the grade average for the object.
+b. Testing the Teacher class:
+i. Create one object Teacher.
+ii. Add the three courses ("CS101", "CS102", "CS101") to the teacher object. If the
+course cannot be added, print “The course [name of the course] cannot be
+added”. If the course is added, print “Course [name of course] added”.
+iii. Remove the three courses ("CS101", "CS102", "CS101"). If the course cannot be
+removed, print “The course [name of the course] cannot be removed”. If the
+course is removed, print “Course [name of course] removed”.

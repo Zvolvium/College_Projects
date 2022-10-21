@@ -1,0 +1,33 @@
+     1                                  ; Mason Motschke CSCI-370
+     2                                  ; ---------------------
+     3                                  ; Prints text on the screen via the C library (printf)
+     4                                  ;
+     5                                  ; Compile: nasm -f elf64 -l hw2-filename.lst hw2-filename.asm
+     6                                  ; Link: gcc -m64 -no-pie -fno-pie hw2-filename.o -o hw2-filename
+     7                                  ; Run: ./hw2-filename
+     8                                  ; ---------------------
+     9                                  
+    10                                      extern printf               ;the C function, to be called
+    11                                  
+    12                                        section .data             ;Data section, initialized variables
+    13 00000000 4D61736F6E204D6F74-     msg:  db "Mason Motschke", 0       ;C string needs 0
+    13 00000009 7363686B6500       
+    14 0000000F 25730A00                fmt:  db "%s", 10, 0            ;the frinf format, "\n",'0'
+    15                                  
+    16                                        section .text             ;code section
+    17                                  
+    18                                        global main               ;standard gcc entry point
+    19                                  main:                           ;program label for the entry point
+    20 00000000 55                            push rbp                  ;set up stack frame, must be alligned
+    21                                  
+    22 00000001 48BF-                         mov rdi,fmt
+    22 00000003 [0F00000000000000] 
+    23 0000000B 48BE-                         mov rsi,msg
+    23 0000000D [0000000000000000] 
+    24 00000015 B800000000                    mov rax,0                 ;or can be  xor   rax,rax
+    25 0000001A E8(00000000)                  call printf               ;call C function
+    26                                  
+    27 0000001F 5D                            pop rbp                   ;restore stack
+    28                                  
+    29 00000020 B800000000                    mov rax,0                 ;normal, no error, return value
+    30 00000025 C3                            ret                       ;return

@@ -1,0 +1,20 @@
+CC = gcc
+CFLAGS = -c -Wall
+
+all: hw5-Mason_Motschke.o hw5-A-Mason_Motschke.o hw5-B-Mason_Motschke.o hw5-C-Mason_Motschke.o hw5-D-Mason_Motschke.o
+	$(CC) hw5-Mason_Motschke.o hw5-A-Mason_Motschke.o hw5-B-Mason_Motschke.o hw5-C-Mason_Motschke.o hw5-D-Mason_Motschke.o -o hw5-Mason_Motschke
+
+hw5-Mason_Motschke.o: hw5-Mason_Motschke.c
+	$(CC) $(CFLAGS) hw5-Mason_Motschke.c
+	
+hw5-A-Mason_Motschke.o: hw5-A-Mason_Motschke.c
+	$(CC) $(CFLAGS) hw5-A-Mason_Motschke.c
+
+hw5-B-Mason_Motschke.o: hw5-B-Mason_Motschke.c
+	$(CC) $(CFLAGS) hw5-B-Mason_Motschke.c
+
+hw5-C-Mason_Motschke.o: hw5-C-Mason_Motschke.c
+	$(CC) $(CFLAGS) hw5-C-Mason_Motschke.c
+
+hw5-D-Mason_Motschke.o: hw5-D-Mason_Motschke.c
+	$(CC) $(CFLAGS) hw5-D-Mason_Motschke.c

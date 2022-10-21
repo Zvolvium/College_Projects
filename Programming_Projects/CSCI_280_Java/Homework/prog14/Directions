@@ -1,0 +1,13 @@
+Program #14
+
+1) Write a program to get an input from the user and store it into a file. -
+    Using Reader and Writer files, the program should follow this structure:
+    
+        • Read the file input.txt using the BufferedReader class and store it as a string object.
+        
+        • Read an input string from the keyboard using BufferedReader and print it to the console.
+        
+        • Read the previous read string object from the file input.txt -
+            using StringReader, and print it character by character, each character in a line.
+            
+        • Print the previous read string object to a file called “output.txt” using PrintWriter.

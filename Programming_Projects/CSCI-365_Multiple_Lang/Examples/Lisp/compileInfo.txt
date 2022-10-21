@@ -1,0 +1,10 @@
+GNU Lisp 2.49.9
+Implements ANSI Common Lisp
+
+To run a lisp program
+clisp sourceFile.lsp
+
+
+
+
+

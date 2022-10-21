@@ -1,0 +1,55 @@
+HW-1		CS370	10 points	Due: Monday, 1/24/2022
+
+Modify the following assembly language program such that your
+name is included in the comment section and such that it prints
+the contents of the source file on the screen.
+
+; --------------------------------------------------
+; Displays the contents of a file on the screen.
+;
+; Compile with: nasm -f elf64 hw1-yourname.asm
+; Link with: ld hw1-yourname.o -o hw1-yourname
+; run with: ./hw1-yourname
+; --------------------------------------------------
+section .data
+  file db "hw1-yourname.asm",0 	;filename ends with '\0' byte
+section .bss
+  descriptor resb 4 		;memory for storing descriptor
+  buffer resb 1024
+  len equ 1024
+section .start
+global _start
+_start:
+  mov eax,5 			;open
+  mov ebx,file 			;filename
+  mov ecx,0 			;read only
+  int 80h 			;open filename for read only
+
+  mov [descriptor],eax 		;storing the descriptor
+
+  mov eax,3 			;read from file
+  mov ebx,[descriptor] 		;your file descriptor
+  mov ecx,buffer 		;read to buffer
+  mov edx,len 			;read len bytes
+  int 80h 			;read len bytes to buffer from file
+
+  mov edx,eax 			;storing count of readed bytes to edx
+  mov eax,4 			;write to file
+  mov ebx,1 			;terminal
+  mov ecx,buffer 		;from buffer
+  int 80h 			;write to terminal all readed bytes from buffer
+
+  mov eax,6 			;close file
+  mov ebx,[descriptor] 		;your file descriptor
+  int 80h 			;close your file
+
+  mov eax,1
+  mov ebx,0
+  int 80h
+
+REQUIREMENTS:
+-------------
+1. Your program must run on the Linux Mint machines in Engineering.
+2. Your full name must appear as a comment at the beginning of your program.
+3. Your source code must be named hw1-yourname.asm
+5. Failure to follow the above directions will result in loss of points.

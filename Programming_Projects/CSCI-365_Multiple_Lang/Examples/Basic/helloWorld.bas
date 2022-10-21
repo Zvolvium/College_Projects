@@ -1,0 +1,11 @@
+5 REM HelloWorld in bwbasic
+10 PRINT "Hello World"
+20 GOTO 100
+30 GOSUB 200
+40 SYSTEM
+50 REM END OF PROGRAM
+100 PRINT "Hello World"
+110 GOTO 30
+200 PRINT "Hello World"
+210 RETURN
+

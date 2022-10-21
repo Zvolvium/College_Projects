@@ -1,0 +1,14 @@
+Program #13
+
+1) Write a program to create a file and write data into it using the methods OutputStream class.
+
+2) Get the data (the input text to write) from the user. - 
+    Specify only 50 bytes (about 2 lines). You can also
+    specify for the user to press enter after each line to get input into the program.
+    
+3) Write the input text into a file called “output.txt”. -
+    Read the written text from the file “output.txt” using an
+    inputStream and write its content to the monitor.
+    
+4) Watch the video assignment 13 posted on Blackboard for a demo and more -
+    explanation of what the program should do.

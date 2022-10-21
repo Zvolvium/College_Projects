@@ -1,0 +1,15 @@
+Dr Racket 6.1.4
+Supports standards from R5RS and R6RS (Revised # Reports on the Algorithmic Language Scheme)
+
+To run a Racket (Scheme) program
+drracket sourceFile.rkt
+
+To run a program interactively
+drracket
+
+
+
+
+
+
+

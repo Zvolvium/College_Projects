@@ -1,0 +1,16 @@
+Haskell 8.6.5
+Implements Glasgow Haskell Compiler
+
+To compile a Haskell program without providing an executable filename
+ghc sourceFile.hs
+** creates the output file sourceFile **
+
+ghc -o executableFile sourceFile.hs
+** creates the output file executableFile **
+
+To run a Haskell program
+./sourceFile      ** no executable file name provided
+or
+./executableFile  
+
+

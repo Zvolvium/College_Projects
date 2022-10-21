@@ -1,0 +1,16 @@
+GNU C++ 4.9.2
+Implements C++
+
+To compile a C++ program
+g++ sourceFile.cpp
+** creates the output file a.out **
+
+g++ sourceFile.cpp -o executableFile
+** creates the output file executableFile **
+
+To run a C++ program
+./a.out
+or
+./executableFile
+
+

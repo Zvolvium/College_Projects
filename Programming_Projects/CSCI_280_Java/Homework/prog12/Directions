@@ -1,0 +1,11 @@
+Program #12
+Write a java program to get an input of two integers from the user and print the sum - 
+    of the two numbers.
+    
+Add an exception block to handle the mismatch input when the user enters a non-integer input.
+
+If the user enters an input that does not match the integer type, - 
+    ask the user to re-enter an integer input.
+
+Stop when the user enters two integer inputs and count the invalid integer - 
+    inputs entered. Print the sun and the invalid integer attempts.
