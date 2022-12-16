@@ -1,0 +1,87 @@
+HW-5	CS451	30 points	Due: October 24
+
+It's that spooky time of year when the dead walk the Earth, 
+things go bump in the night, and the Centers for Disease 
+Control (CDC) recognizes the need for zombie preparedness 
+(https://www.emergency.cdc.gov/cerc/cerccorner/article_050918.asp). 
+Expect zombies to be running amok at a town near you! So, 
+hurry up and get your anti-zombie shots ASAP!
+
+The Clock Page Replacement requires 1 bit (the use bit) 
+associated with each page. Whenever we load or access a 
+page we set the use bit to 1. Whenever we want to replace 
+a page, we scan the buffer (implemented as a circular 
+linked-list) looking for a page with a use bit set to 0 
+(which we would remove). If we find a page with a use 
+bit of 1, we reset that bit to 0 and move on.
+
+The Not-Recently-Used (NRU) page replacement requires 2 
+additional bits associated with each page (a referenced 
+bit “R” and modified bit “M”). Whenever we read from or 
+write to a page we set the R bit to 1. Whenever we write 
+to a page we set the M bit to 1. When a process is started, 
+both bits for all of its pages are set to 0. Periodically, 
+the OS resets the R bit to 0. When a page fault occurs 
+the OS inspects all pages and assigns them to 1 of 4 
+categories:
+
+   Class 0: R = 0, M = 0
+   Class 1: R = 0, M = 1
+   Class 2: R = 1, M = 0
+   Class 3: R = 1, M = 1
+
+The OS removes (first found) a page from the lowest non-empty 
+class set. 
+
+Your mission (should you choose to accept it) is to implement
+a combined Not-Recently-Used & Clock Page Replacement algorithm
+that uses 2 bits (M and R) and a circular linked list where 
+each page is represented by a node in the linked list. We will
+call this new invention (my invention) the "Enhanced Second 
+Chance - Clock" alorithm (ESC-C).
+
+To implement ESC-C, you must modify HW4 as follows:
+
+The circular linked list will have 6 entries (can manage 6 
+pages) and will be managed by the parent. Each of the 5 threads 
+will request 1 memory page when they are created (1 free page left). 
+If the account balance for any thread is negative (after 
+ANY "W") the thread will set the R and M bits to 1 for that 
+initially loaded page. If the account balance for any thread 
+is positive (after ANY "W") the thread will set the R bit to 
+1 for that initially loaded page and leave the M bit as it 
+was. The ESC-C algorithm must reset all R bits to 0 on occasion 
+(use the clock algorithm).
+
+On occasion (e.g. randomly) each thread will require an
+additional page, generating a page fault. At this point the 
+thread generating the page fault must: 1) print "Page fault in 
+thread XXX", 2) locate a page to replace and print the details 
+(R and M bits and ownership) of the page being removed, 3) load 
+the new page, 4) set the bits to some initial value (see 
+notes), and 5) treat this page as the "initially" loaded page
+(as described in the paragraph above).
+
+Once more than 1 additional page has been loaded, it is very 
+likely that a thread will have no pages in memory. That 
+thread will also generate a page fault whenever it encounters 
+a "W".
+
+You will also need a mutex to protect the links in the linked 
+list to prevent any possible corruptions of the linked list.
+
+NOTES:
+------
+Initially loaded pages will need some protection to keep them in
+until first used.
+
+REQUIREMENTS:
+-------------
+1. Your program must run on the Linux Mint machines in Engineering.
+2. Your full name must appear as a comment at the beginning of your program.
+3. Your source code must be named hw5-yourname.c or hw5-yourname.cpp
+4. Your source MUST compile using gcc or g++ in accordance with the extension. 
+5. Your program must only use mutex(s) for synchronization. No conditionals, 
+   no semaphores, no global variables.
+6. Your program must use pthreads. Not threads.
+7. Failure to follow the above will result in at least -50% of the grade.

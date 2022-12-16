@@ -1,0 +1,77 @@
+HW-7	CSci-451	40 points		Due: ondayMay, 11/28/2022
+
+This assignment is to honor the Zucca Gigantopithecus (great pumpkin), 
+who flies through the air on Halloween night delivering homework solutions 
+to computer science students throughout the world. Of course, he only 
+visits the most sincere computer science students, the rest have to 
+complete their own assignments. How sincere are you?
+
+Program 0
+---------
+Program 0 (parent) will create a semaphore, create two pipes, spawn 
+3 children (named program1, program2, and program3), and pass the 
+semaphore ID and pipe IDs to the children (as required) via command 
+line arguments.
+
+Program 1 and program 2 must be forked at the same time and the 
+semaphore MUST be used to synchronize reading/writing to one of the 
+pipes. Program3 can be forked after 1 and 2 terminate.
+
+Program 1 
+---------
+Program 1 will read a text file called "input.data" and extract the 
+words. Note that words will be separated only by spaces, commas, or 
+periods. Commas and periods will be considered part of a word. As 
+each word is extracted, program 1 will write the words (1 word per 
+line) into the pipe.
+ 
+input.data:
+It is the Zucca Gigantopithecus, or Great Pumpkin, Charlie Brown. 
+
+Program 2
+---------
+Program 2 will read from the pipe and convert each word into Pig Latin 
+(rules shown below) and write the converted word to another pipe. 
+Program 2 will also keep track of how many words of each form (2 types 
+possible) were converted and write those values to 2 other files 
+(shared1.dat and shared2.dat). 
+
+Pig Latin rules:
+1) Type 1: For all words beginning with a vowel add the text "ray" to the 
+   end of the word. For example: "and" becomes "andray," "end" becomes "endray", 
+   etc. Note that any punctuation marks must remain at the end of the newly 
+   formed word (and. becomes andray.).
+
+2) Type 2: For all words beginning with consonants move the first letter to 
+   the end of the word and add "ay". For example "number" becomes "umbernay," 
+   "letter" becomes "etterlay," etc. Note that any punctuation marks must 
+   remain at the end of the newly formed word.
+
+Program 3
+---------
+Program 3 will open shared1.dat and shared2.dat files and display the values 
+contained on the screen using the format:
+
+Type 1: word_count
+Type 2: word_count
+
+Program 3 will also open the second pipe and reconstruct the original document 
+(multiple words per line) and write it out to output.data. For example:
+
+output.data:
+Itray isray hetay uccaZay igantopithecusGay, orray reatGay umpkinPay, 
+harlieCay rownBay.
+
+REQUIREMENTS:
+-------------
+1. This MUST run on the SERVER (cscluster.cs.und.edu).
+2. Your full name must appear as a comment at the beginning of your 
+   program.
+3. Your programs MUST be named program0, program1, program2, and program3.
+   My script will assume those filenames. If your programs do not work because
+   you used different filename, you will get 0 points.
+4. You must include your source files and instructions on how to compile them
+   (or a makefile).
+5. Your tarball must be named hw7-yourname.tar
+6. Your code must adhere to coding style 1TBS (https://en.wikipedia.org/wiki/Indentation_style)
+7. Failure to follow the above directions will result in loss of points.

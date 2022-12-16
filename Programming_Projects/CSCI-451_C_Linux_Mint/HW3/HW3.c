@@ -12,8 +12,10 @@ void *Read (void *arg){
 
   while (1){
     if (feof(in)){ flag = 1; break; }
+
     // Mutex Lock
     pthread_mutex_lock(&read);
+
     fscanf(in, "%d", &global); //printf("Read %d\n", global);
     // Mutex Unlock
     pthread_mutex_unlock(&read); pthread_mutex_unlock(&write);
@@ -25,10 +27,13 @@ void *Write (void *arg){
   // Write out to file | hw3.out
   while (1){
     if (flag == 1){ break; }
+
     // Mutex Lock
     pthread_mutex_lock(&write);
+
     if (global % 2 == 0){ for (int i = 0; i < 2; i++){ fprintf(fpOut, "%d\n", global); } } // IF EVEN print * 2
     else { fprintf(fpOut, "%d\n", global); } // IF ODD print //printf("Checked %d\n", global);
+
     // Mutex Unlock
     pthread_mutex_unlock(&write); pthread_mutex_unlock(&read);
     pthread_mutex_lock(&write);
