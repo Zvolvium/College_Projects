@@ -173,7 +173,7 @@ def Main():
         elif (user == '6'):                    # Do Quadratic
             Quadratic(); flag = 1;
         elif (user == '7'):                    # Do Exit
-            recurrLimit = 1000; setRecurrLimit(recurrLimit); Exit("--- Exited Program\n");
+            recurrLimit = 1000; setRecurrLimit(recurrLimit); Exit(0);
         else:                                  # Catches Any and All Other Cases and Re-Calls Main() Recursively
             print("--- Choice not found"); recurrLimit += 1; setRecurrLimit(recurrLimit); Main();
         if ( (user == None) or (flag == 1) ):
