@@ -7,12 +7,11 @@
 
     Contact: mason.motschke@und.edu
 
-    Comment: TODO - Update
+    Comment:
         Write each of the following programs in C, C++, Python, and Java.
-        Write a single problem that addresses all three parts:
-            Part 1 – Convert from seconds
-            Part 2 – Convert to dollars
-            Part 3 - Work with output
+        Write a program that surveys the majors of students in some unnamed class.
+        Only majors I’m concerned with are Computer Science, Data Science, and Cyber Security.
+        For only the CS majors we want to ask about their minor.
 */
 #include <stdio.h>
 #include <stdlib.h>
