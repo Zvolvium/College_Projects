@@ -21,7 +21,7 @@ def getMajorsAndMinors ():  # Returns a Dictionary of Majors with # of Occurance
         'CS' : [0, minors], 'Data' : 0, 'Cyber' : 0, 'Other' : 0
     };
 
-    next = input("Enter a Major('Done to quit'): ");
+    next = input("Enter a Major('Done to quit'): ").strip();
     while (next.lower() != "Done".lower()):
         if (next.lower() == 'CS'.lower()):
             majors['CS'][0] += 1;
@@ -32,11 +32,11 @@ def getMajorsAndMinors ():  # Returns a Dictionary of Majors with # of Occurance
             majors['Cyber'] += 1;
         else:
             majors['Other'] += 1;
-        next = input("\nEnter a Major('Done to quit'): ");
+        next = input("\nEnter a Major('Done to quit'): ").strip();
     return majors;
 
 def getMinors (currMinors):  # Returns Dictionary of Updated Minor(s) Data
-    nextMinor = input("Enter your Minor: ");
+    nextMinor = input("Enter your Minor: ").strip();
     if (nextMinor.lower() == 'Data'.lower()):
         currMinors['Data'] += 1;
     elif (nextMinor.lower() == 'Cyber'.lower()):
@@ -62,16 +62,25 @@ def printData (data):
     print('\n\n\nNumber of Students Surveyed: {0}'.format(studentNum));
     print("\n\nMajors of Students in the Survey:");
     for key in keys:
-        if (key == 'CS'):
-            print('{0:10} {1:3} {2:>10}'.format(key, data[key][0], '{:1.2f}'.format((data[key][0] / studentNum) * 100)));
+        if (studentNum == 0):
+            if (key == 'CS'):
+                print('{0:10} {1:3} {2:>10}'.format(key, data[key][0], '{:1.2f}'.format(studentNum)));
+            else:
+                print('{0:10} {1:3} {2:>10}'.format(key, data[key], '{:1.2f}'.format(studentNum)));
         else:
-            print('{0:10} {1:3} {2:>10}'.format(key, data[key], '{:1.2f}'.format((data[key] / studentNum) * 100)));
+            if (key == 'CS'):
+                print('{0:10} {1:3} {2:>10}'.format(key, data[key][0], '{:1.2f}'.format((data[key][0] / studentNum) * 100)));
+            else:
+                print('{0:10} {1:3} {2:>10}'.format(key, data[key], '{:1.2f}'.format((data[key] / studentNum) * 100)));
 
     print("\n\nMinors of Computer Science Students in Survey:");
     minors = data['CS'][1]; keys = minors.keys();
     studentNum = getStudentNumber(minors);
     for key in keys:
-        print('{0:10} {1:3} {2:>10}'.format(key, minors[key], '{:1.2f}'.format((minors[key] / studentNum) * 100)));
+        if (studentNum == 0):
+            print('{0:10} {1:3} {2:>10}'.format(key, minors[key], '{:1.2f}'.format(studentNum)));
+        else:
+            print('{0:10} {1:3} {2:>10}'.format(key, minors[key], '{:1.2f}'.format((minors[key] / studentNum) * 100)));
     print('\n\n');
     return;
 
