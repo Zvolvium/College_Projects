@@ -22,7 +22,7 @@ public class prog2MAM {
 
     private static Scanner keyboard;
 
-    private static Map<String, Map<String, Integer>> getMajorsAndMinors (Scanner keyboard){
+    private static Map<String, Map<String, Integer>> getMajorsAndMinors (Scanner keyboard){  // Collects and Returns Majors and Minors from the Users in Map 'majorsAndMinors'
         Map<String, Integer> minors = new HashMap<String, Integer>();
         Map<String, Integer> majors = new HashMap<String, Integer>();
 
@@ -64,7 +64,7 @@ public class prog2MAM {
         return majorsAndMinors;
     }
 
-    private static Map<String, Integer> getMinor (Scanner keyboard, Map<String, Integer> Minors){
+    private static Map<String, Integer> getMinor (Scanner keyboard, Map<String, Integer> Minors){  // Returns Updated Minors Map
         System.out.printf("Enter your Minor: ");
         String input = keyboard.nextLine().strip();
 
@@ -89,7 +89,7 @@ public class prog2MAM {
         return Minors;
     }
 
-    private static float getStudentNumber (Map<String, Integer> map, Object[] keys){
+    private static float getStudentNumber (Map<String, Integer> map, Object[] keys){  // Returns Number of Students that were Surveyed from the Entries in the Map
         float num = 0;
         for (int i = 0; i < keys.length; i++){
             num += map.get(keys[i]);
@@ -97,7 +97,7 @@ public class prog2MAM {
         return num;
     }
 
-    private static Map<String, Integer> majorAndMinorSetup (Map<String, Integer> map, int flag){
+    private static Map<String, Integer> majorAndMinorSetup (Map<String, Integer> map, int flag){  // Returns Initialized Map / Dictionary
         if (flag == 0){ // If Major Setup
             map.put("CS", 0);
             map.put("Data", 0);
@@ -112,7 +112,7 @@ public class prog2MAM {
         return map;
     }
 
-    private static void printData (Map<String, Map<String, Integer>> data){
+    private static void printData (Map<String, Map<String, Integer>> data){  // Prints all Data from the Map 
         Set<String> dataSet = data.keySet();
         Object[] dataKeys = dataSet.toArray();
 
