@@ -12,29 +12,68 @@ import java.lang.Thread;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import hw2.xml.MessageBuilder;
+import hw2.xml.MessageParser;
+
+import java.io.IOException;
 
 public class Server extends Thread {
 
-    static Scanner keyboard;
     static ServerSocket serverSocket;
+    static Socket clientSocket;
     static int connections;
+    static ArrayList<String> Queue;
+    static int maxQueue;
 
+    public Server (ArrayList<String> Queue, Socket client, int maxQueue){
+        this.Queue = Queue;
+        this.clientSocket = client;
+        this.maxQueue = maxQueue;
+    }
     
     public void run(){
         System.out.println("\n - Hi I'm " + this.getName());
-        return;
+        try {
+            //MessageBuilder mb = new MessageBuilder();
+            //MessageParser mp = new MessageParser();
+            PrintWriter writer = new PrintWriter(this.clientSocket.getOutputStream(), true);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(this.clientSocket.getInputStream()));
+
+            // while (){
+
+            // }
+            
+            this.clientSocket.close();
+            return;
+        } catch (Exception e){
+
+        }
     }
 
     public static int getOpenSpot (Server threads[]){
         for (int i = 0; i < threads.length; i++){
-            if (threads[i] == null){
-                return i;
-            }
-            else if (!threads[i].isAlive()){
+            if ((threads[i] == null) || (!threads[i].isAlive())){
                 return i;
             }
         }
         return -1;
+    }
+
+    public synchronized String queueRead (ArrayList<String> queue){
+        if (!queue.isEmpty()){
+            return queue.remove(0);
+        } else {
+            return "Error: Queue Empty";
+        }
+    }
+
+    public synchronized int queueSize (ArrayList<String> queue){
+        return queue.size();
+    }
+
+    public synchronized void queueWrite (ArrayList<String> queue, int maxSize){
+        
     }
 
     public static void main (String args[]){
@@ -45,29 +84,31 @@ public class Server extends Thread {
             System.exit(0);
         }
         System.out.println(" --- Setting Up...");
+        int maxConnections = 100, connections = 0;
+        Server threads[] = new Server[maxConnections];
 
         // Socket
         try {
+            Queue = new ArrayList<String>();
             serverSocket = new ServerSocket(Integer.parseInt(args[0]));
+            maxQueue = Integer.parseInt(args[1]);
         } catch (Exception e) {
             System.out.println("-- Error: " + e);
             System.exit(0);
         }
-        int maxConnections = 100, connections = 0;
-        Server threads[] = new Server[maxConnections];
         System.out.println(" --- Finished Setting Up\n");
 
         while (true){
 
             try {
                 System.out.println("\n --- Waiting for Connection...");
-                Socket clientSocket = serverSocket.accept();
+                clientSocket = serverSocket.accept();
                 System.out.println(" -- Connecting...");
                 while (connections == maxConnections){
                     Thread.sleep(1000);
                 }
                 int open = getOpenSpot(threads);
-                threads[open] = new Server();
+                threads[open] = new Server(Queue, clientSocket, maxQueue);
                 threads[open].start();
                 System.out.println(" -- Got Connection!");
                 connections++;
