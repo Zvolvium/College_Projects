@@ -3,5 +3,6 @@
         "*.c": "c",
         "*.py": "python",
         "iostream": "cpp"
-    }
+    },
+    "python.analysis.typeCheckingMode": "basic"
 }
