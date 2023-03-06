@@ -80,7 +80,7 @@ public class prog3MAM {
         return 0;
     }
 
-    public int sumOfSquare (){
+    public int sumOfSquare (int value){
         // int sumOfSquare (int value)
         // def sumOfSquare (value)
 
