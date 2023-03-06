@@ -38,7 +38,8 @@ def rectangle (width, height, character, fillChar = ' '):
     # def rectangle (width, height, character, fillChar=' ')
     
     # Will draw the outline on the screen of a rectangle with the specified width and height.
-    # Use character to draw the outline. Use fillChar for all characters inside the outline.
+    # Use character to draw the outline.
+    # Use fillChar for all characters inside the outline.
     # Use a blank space as the fill character when not specified.
     # You can assume that the width and height will be positive.
     
@@ -55,8 +56,8 @@ def summation (value):
     # int summation (int value)
     # def summation (int value)
     
-    # returns the summation of 1 to intValue. You can assume that intValue will be, 
-    # positive. For example, summation (5) would return 15 (1 + 2 + 3 + 4 + 5). 
+    # returns the summation of 1 to intValue. You can assume that intValue will be positive.
+    # For example, summation (5) would return 15 (1 + 2 + 3 + 4 + 5). 
     
     pass;
     
