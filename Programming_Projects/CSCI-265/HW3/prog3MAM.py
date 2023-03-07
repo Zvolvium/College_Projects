@@ -9,28 +9,38 @@ def inputWithinRange (prompt, lowerLimit, upperLimit = None):
     # continue to ask for a value until the entered value is within the provided range.
     # Once a valid value has been entered return it from the function.
     
-    #In Java (use String for the prompt datatype) and C++ (use string from the prompt datatype) overload the function.
+    # In Java (use String for the prompt datatype) and C++ (use string from the prompt datatype) overload the function.
     # Use a default lowerLimit of 0 when only the upperLimit is provided.
     # All of the work must be done in one function, the second function should call the first function.
     # We want multiple options in calling the function, but do not want to duplicate the work.
     # In Python, if only the prompt and a single number is provided use 0 for the lowerLimit and the provided number for the upperLimit.
     
-    pass;
+    user = int(input(prompt));
     
-    return;
-
+    if (upperLimit == None):
+        temp = lowerLimit;
+        lowerLimit = 0;
+        upperLimit = temp;
+        
+    while ( not(lowerLimit <= user <= upperLimit) ):
+        print(f"Input not within, range");
+        user = int(input(prompt));
+    
+    return user;
+    
 def isAFactor (value1, value2):
     #boolean isAFactor (int value1, int value2)  //Java
-    # bool isAFactor (int value1, int value2)     //C++
+    # bool isAFactor (int value1, int value2)    //C++
     # def isAFactor (value1, value2):
     
     # returns True (Python) or true (Java/C++),
     # if the second argument is a factor of (divides evenly into) the first argument.
     # If not, it returns False (Python) or false (Java/C++).
     
-    pass;
-    
-    return;
+    if (value1 % value2 == 0):
+        return True;
+        
+    return False;
 
 def rectangle (width, height, character, fillChar = ' '):
     # void rectangle (int width, int height, char character)
@@ -93,7 +103,23 @@ def square (value):
 def main ():
     # Tests all of the required functions / methods
     
-    pass;
+    inputWithinRange("Enter a Value1: ", -20, 100); print();
+    inputWithinRange("Enter a Value2: ", 10); print();
+
+    isAFactor(2, 200); print();
+    isAFactor(200, 2); print();
+
+    rectangle(5, 5, '&'); print();
+    rectangle(10, 10, '@', '~'); print();
+
+    print(square(50));
+    print(square(10));
+
+    print(summation(10));
+    print(summation(5) );
+
+    print(sumOfSquare(10));
+    print(sumOfSquare(5));
     
     return;
 

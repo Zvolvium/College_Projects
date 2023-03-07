@@ -1,5 +1,8 @@
+import java.util.Scanner;
 
 public class prog3MAM {
+
+    static Scanner keyboard;
     
     public int inputWithinRange (String prompt, int lowerLimit, int upperLimit){
         // int inputWithinRange (s/String prompt, int lowerLimit, int upperLimit)  //Java, C++
@@ -17,16 +20,22 @@ public class prog3MAM {
         // We want multiple options in calling the function, but do not want to duplicate the work.
         // In Python, if only the prompt and a single number is provided use 0 for the lowerLimit and the provided number for the upperLimit.
 
-        ;
+        System.out.printf(prompt);
+        int user = keyboard.nextInt(); System.out.printf("\n\n");
 
-        return 0;
+        while ( (user < lowerLimit) || (user > upperLimit) ){
+            System.out.printf(prompt);
+            user = keyboard.nextInt(); System.out.printf("\n\n");
+        }
+
+        return user;
     }
     public int inputWithinRange (String prompt, int upperLimit){
         // Same Comments as Above rectangle function ---/\
 
-        ;
+        int user = this.inputWithinRange(prompt, 0, upperLimit);
 
-        return 0;
+        return user;
     }
 
     public boolean isAFactor (int value1, int value2){
@@ -38,7 +47,9 @@ public class prog3MAM {
         // if the second argument is a factor of (divides evenly into) the first argument.
         // If not, it returns False (Python) or false (Java/C++).
 
-        ;
+        if (value1 % value2 == 0){
+            return true;
+        }
 
         return false;
     }
@@ -113,7 +124,7 @@ public class prog3MAM {
 
         int sum = 0;
         for (int i = 1; i <= value; i++){
-            sum += this.square(i);
+            sum = sum + this.square(i);
         }
 
         return sum;
@@ -132,8 +143,27 @@ public class prog3MAM {
         // Tests all of the required functions / methods
 
         prog3MAM prog3mam = new prog3MAM();
+        keyboard = new Scanner(System.in);
 
-        ;
+        prog3mam.inputWithinRange("Enter a Value1: ", -20, 100); System.out.println();
+        prog3mam.inputWithinRange("Enter a Value2: ", 10); System.out.println();
+
+        prog3mam.isAFactor(2, 200); System.out.println();
+        prog3mam.isAFactor(200, 2); System.out.println();
+
+        prog3mam.rectangle(5, 5, '&'); System.out.println();
+        prog3mam.rectangle(10, 10, '@', '~'); System.out.println();
+
+        System.out.println(prog3mam.square(50));
+        System.out.println(prog3mam.square(10));
+
+        System.out.println(prog3mam.summation(10));
+        System.out.println(prog3mam.summation(5) );
+
+        System.out.println(prog3mam.sumOfSquare(10));
+        System.out.println(prog3mam.sumOfSquare(5));
+
+        keyboard.close();
 
         return;
     }
