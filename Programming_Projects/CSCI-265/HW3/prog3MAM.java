@@ -59,12 +59,33 @@ public class prog3MAM {
         // When creating the output, the outline will use the character char.
         // Python will only have a single rectangle function.
 
-        ;
+        for (int i = 0; i < height; i++){
+            for (int j = 0; j < width; j++){
+                if ( (i == 0) || (i == height - 1) ){ System.out.printf("%c", character); }
+                else {
+                    if ( (j == 0) || (j == width - 1) ){ System.out.printf("%c", character); }
+                    else { System.out.printf(" "); }
+                }
+            }
+            System.out.printf("\n");
+        }
 
         return;
     }
     public void rectangle (int width, int height, char character, char fillChar){
         // Same Comments as Above rectangle function ---/\
+
+        for (int i = 0; i < height; i++){
+            for (int j = 0; j < width; j++){
+                if ( (i == 0) || (i == height - 1) ){ System.out.printf("%c", character); }
+                else {
+                    if ( (j == 0) || (j == width - 1) ){ System.out.printf("%c", character); }
+                    else { System.out.printf("%c", fillChar); }
+                }
+            }
+            System.out.printf("\n");
+        }
+
         return;
     }
 
@@ -75,9 +96,12 @@ public class prog3MAM {
         // returns the summation of 1 to intValue. You can assume that intValue will be positive.
         // For example, summation (5) would return 15 (1 + 2 + 3 + 4 + 5).
 
-        ;
+        int sum = 0;
+        for (int i = 1; i <= value; i++){
+            sum += i;
+        }
 
-        return 0;
+        return sum;
     }
 
     public int sumOfSquare (int value){
@@ -87,9 +111,12 @@ public class prog3MAM {
         // returns the sum of the squares from 1 to value. For example, sumOfSquares(5) would return 55 (1 + 4 + 9 + 16 + 25).
         // You MUST use a loop and the square function to determine the returned value.
 
-        ;
+        int sum = 0;
+        for (int i = 1; i <= value; i++){
+            sum += this.square(i);
+        }
 
-        return 0;
+        return sum;
     }
 
     public int square (int value){
@@ -98,13 +125,17 @@ public class prog3MAM {
 
         // returns the square of value.
 
-        ;
-
-        return 0;
+        return (value * value);
     }
 
     public static void main (String[] args){
+        // Tests all of the required functions / methods
 
+        prog3MAM prog3mam = new prog3MAM();
+
+        ;
+
+        return;
     }
     
 }

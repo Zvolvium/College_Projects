@@ -48,7 +48,10 @@ def rectangle (width, height, character, fillChar = ' '):
     # When creating the output, the outline will use the character char.
     # Python will only have a single rectangle function.
     
-    pass;
+    print(f"{character * width}");
+    for i in range(0, height - 2):
+        print(f"{character}{fillChar * (width - 2)}{character}");
+    print(f"{character * width}");
     
     return;
 
@@ -59,9 +62,11 @@ def summation (value):
     # returns the summation of 1 to intValue. You can assume that intValue will be positive.
     # For example, summation (5) would return 15 (1 + 2 + 3 + 4 + 5). 
     
-    pass;
+    sum = 0;
+    for i in range(1, value + 1):
+        sum += i;
     
-    return;
+    return sum;
 
 def sumOfSquare (value):
     # int sumOfSquare (int value)
@@ -71,9 +76,11 @@ def sumOfSquare (value):
     # For example, sumOfSquares(5) would return 55 (1 + 4 + 9 + 16 + 25).
     # You MUST use a loop and the square function to determine the returned value.
     
-    pass;
+    sum = 0;
+    for i in range(1, value + 1):
+        sum += square(i);
     
-    return;
+    return sum;
 
 def square (value):
     # int square (int value)
@@ -81,14 +88,12 @@ def square (value):
     
     # returns the square of value
     
-    pass;
-    
-    return;
+    return (value ** 2);
 
 def main ():
     # Tests all of the required functions / methods
     
-    # Square
+    pass;
     
     return;
 
