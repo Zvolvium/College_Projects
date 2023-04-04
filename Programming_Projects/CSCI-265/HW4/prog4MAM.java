@@ -13,7 +13,7 @@ import javax.sound.midi.Track;
  *      Write each of the following functions.
  *      The function header must be implemented exactly as specified.
  *      For Python the type of value that should be returned from each function is in parenthesis in the function description.
- *      Write a main function that HW4s each of the required functions/methods.
+ *      Write a main function that tests each of the required functions/methods.
  *      You do not have to use keyboard input in main, just ensure that each function/method is called more than one.*
  *      Remember that the functions themselves will not display any output,
  *      they will return values that can then be written to the screen.
@@ -215,7 +215,7 @@ public class prog4MAM {
     }
 
     public static void main (String[] args){
-        // HW4 Functions
+        // test Functions
         int[] merge = {
             22, 65, 4, 8, 9, 200, 300
         };
@@ -226,24 +226,24 @@ public class prog4MAM {
             "Tom", "Phil", "Jackie", "Mickel", "Trevor", "Teapot", "Trishia"
         };
 
-        prog4MAM HW4 = new prog4MAM();
+        prog4MAM test = new prog4MAM();
 
         int[] temp;
         
-        System.out.printf("findMaxScore: %d\n", HW4.findMaxScore(scoreList));
-        System.out.printf("findMinScore: %d\n", HW4.findMinScore(scoreList));
-        System.out.printf("hasPerfectScore: %b\n", HW4.hasPerfectScore(scoreList));
-        System.out.printf("calcAverage: %f\n", HW4.calcAverage(scoreList));
-        System.out.printf("findStudentWithMax: %s\n", HW4.findStudentWithMax(scoreList, namesList));
+        System.out.printf("findMaxScore: %d\n", test.findMaxScore(scoreList));
+        System.out.printf("findMinScore: %d\n", test.findMinScore(scoreList));
+        System.out.printf("hasPerfectScore: %b\n", test.hasPerfectScore(scoreList));
+        System.out.printf("calcAverage: %f\n", test.calcAverage(scoreList));
+        System.out.printf("findStudentWithMax: %s\n", test.findStudentWithMax(scoreList, namesList));
 
-        temp = HW4.mergeLists(scoreList, merge); System.out.printf("mergeLists: ");
+        temp = test.mergeLists(scoreList, merge); System.out.printf("mergeLists: ");
         for (int i = 0; i < temp.length; i++){ System.out.printf("%d ", temp[i]); } System.out.println();
-        temp = HW4.mergeLists(merge, scoreList); System.out.printf("mergeLists: ");
+        temp = test.mergeLists(merge, scoreList); System.out.printf("mergeLists: ");
         for (int i = 0; i < temp.length; i++){ System.out.printf("%d ", temp[i]); } System.out.println();
 
-        System.out.printf("standardDeviation: %f\n", HW4.standardDeviation(scoreList));
-        System.out.printf("findInList: %d\n", HW4.findInList(scoreList, 56, 10));
-        System.out.printf("findInList: %d\n", HW4.findInList(scoreList, 102));
+        System.out.printf("standardDeviation: %f\n", test.standardDeviation(scoreList));
+        System.out.printf("findInList: %d\n", test.findInList(scoreList, 56, 10));
+        System.out.printf("findInList: %d\n", test.findInList(scoreList, 102));
 
         return;
     }
