@@ -27,9 +27,10 @@ void add (char *argv[]){
 
     long sum = 0;
     for (int i = 0; i <= argVal; i++){
-        if (argVal < 0){ break; }
-        else { sum += (long)i; }
+        sum += (long)i;
     }
+    
+    if (argVal < 0){ sum = 0; }
     printf("\n -- Sum = %ld\n\n", sum);
 }
 
