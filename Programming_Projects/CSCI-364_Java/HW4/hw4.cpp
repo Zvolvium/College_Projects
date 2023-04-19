@@ -13,13 +13,24 @@ bool checkArgs (int argc, char *argv[]){
     long value = 0;
     try {
         value = (long)stoi(arg);
-        printf("\n%ld\n", value);
         return true;
     }
     catch (...){
         printf("\n - Error: Command Line Argument Not Valid!!\n\n");
         return false;
     }
+}
+
+void add (char *argv[]){
+    int argVal = stoi(argv[1]);
+    printf("\n -- Found Command Line Argument: %d\n", argVal);
+
+    long sum = 0;
+    for (int i = 0; i <= argVal; i++){
+        if (argVal < 0){ break; }
+        else { sum += (long)i; }
+    }
+    printf("\n -- Sum = %ld\n\n", sum);
 }
 
 int main (int argc, char *argv[]){
@@ -30,16 +41,6 @@ int main (int argc, char *argv[]){
 
          - If the command line value is less than 0, the sum should be 0.
     */
-   if (!checkArgs(argc, argv)){ return 0; }
-
-   printf("\nContinued...\n");
-   int argVal = stoi(argv[1]);
-
-   long sum = 0;
-   for (int i = 0; i <= argVal; i++){
-        sum += (long)i;
-   }
-
-   if (argVal < 0){ sum = 0; }
-   printf("\n\n -- Sum = %ld\n\n", sum);
+    if (!checkArgs(argc, argv)){ return 0; }
+    add(argv);
 }
