@@ -1,16 +1,3 @@
-GNU C++ 4.9.2
-Implements C++
-
-To compile a C++ program
-g++ sourceFile.cpp
-** creates the output file a.out **
-
-g++ sourceFile.cpp -o executableFile
-** creates the output file executableFile **
-
-To run a C++ program
-./a.out
-or
-./executableFile
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:33b38303c44b9744bc499522837fd3d3d9a1a94f43b350aad2546571f2ce305a
+size 245

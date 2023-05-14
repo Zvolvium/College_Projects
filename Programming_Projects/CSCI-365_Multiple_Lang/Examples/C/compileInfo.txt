@@ -1,16 +1,3 @@
-GNU C 4.9.2
-Implements C
-
-To compile a C program
-gcc sourceFile.cpp
-** creates the output file a.out **
-
-gcc sourceFile.c -o executableFile
-** creates the output file executableFile **
-
-To run a C program
-./a.out
-or
-./executableFile
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:824f85c9533456dbc4be80082ed582d4de8ac44fe3e33cb0ccf40b81f8c5f640
+size 235

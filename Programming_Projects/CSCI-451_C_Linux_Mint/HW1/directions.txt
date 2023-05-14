@@ -1,36 +1,3 @@
-HW-1	CS451	       10 points	Due: Sept. 5
-
-The intent of this assignment is to write a little program 
-that can extract email/web addresses from a web page (just like 
-the spiders do that spammers use to get email addresses).
-
-Part 1:
-Write a program that uses the system call "system" to execute the 
-command WGET. WGET must download the following page.
-
-http://undcemcs01.und.edu/~ronald.marsh/PROJECTS/PROJECTS.HTML
-
-* Note that WGET MUST operate in quite mode to get full credit!
-
-Part 2:
-Add to the program a section that loads and parses the downloaded
-file extracting all of the project names. Your program must
-generate a listing on the screen of the extracted project names 
-when it is run.
-
-* Note that the web list must be perfect - no extra characters -
-to get full credit.
-
-Part 3:
-Add to the program a section that removes the downloaded file using
-UNLINK.
-
-
-REQUIREMENTS:
--------------
-1. Your program must run on Linux Mint.
-
-2. Your full name must appear as a comment at the beginning of your 
-   program.
-
-3. Your source code must be named hw1-yourname.c or hw1-yourname.cpp
+version https://git-lfs.github.com/spec/v1
+oid sha256:d1284167c56b649904322c72e3636fc5dd42390fc9ea9f59458a24fa1f11c176
+size 1092

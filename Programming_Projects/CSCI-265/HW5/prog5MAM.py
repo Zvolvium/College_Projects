@@ -130,7 +130,12 @@ def printParts (parts):
     # This function/method should not return a value.
     
     # TODO: Finish
-    
+    keys = list(parts.keys());
+    print('  Parts | Cost  ');
+    print('  ------------  ');
+    for key in keys:
+        print(f'  {key} | {parts[key]}');
+    print('  ------------  ');
     return;
 
 def totalParts (parts):
@@ -147,6 +152,22 @@ def main():
     parts = {};
     
     # Testing Functions
+    addPart(parts, "Hammer", 15);
+    addPart(parts, "Sickle", 30);
+    addPart(parts, "Jack Hammer", 50);
+    
+    print(f'Total Parts: {totalParts(parts)}');
+    print(f'Average Price: {averagePrice(parts)}');
+    print(f'Least Expensive Part: {leastExpensivePart(parts)}');
+    print(f'Most Expensive Part: {mostExpensivePart(parts)}');
+    print(f'IS Part ~ Hammer: {isPart(parts, "Hammer")}');
+    print(f'IS Part ~ Nail: {isPart(parts, "Nail")}');
+    print(f'Parts Greater Than 10: {partsGreaterThan(parts, 10)}');
+    print(f'Parts Greater Than 20: {partsGreaterThan(parts, 20)}');
+    print(f'Parts Greater Than 40: {partsGreaterThan(parts, 40)}');
+    
+    print();
+    printParts(parts);
     return;
 
 if __name__ == '__main__':

@@ -1,16 +1,3 @@
-GNU Fortran 4.9.2
-Implements Fortran 95
-
-To compile a Fortran 95 program
-gfortran sourceFile.for 
-** creates the output file a.out **
-
-gfortran sourceFile.for -o executableFile
-** creates the output file executableFile **
-
-To run a Fortran 95 program
-./a.out
-or
-./executableFile
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:b208b5d6367dee6bb150d0d030709a9ac96033f63eff708d87098bed6b19de27
+size 281

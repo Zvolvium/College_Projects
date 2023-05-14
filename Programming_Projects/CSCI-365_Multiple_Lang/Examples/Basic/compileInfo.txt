@@ -1,10 +1,3 @@
-Bywater BASIC Interpreter 2.2
-Implements subset of ANSI Standard for full BASIC
-
-To run BASIC program
-bwbasic helloWorld.bas
-
-To run a program interactively
-bwbasic
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e52eea7909cf232867970d8b868c1ce52d59aac0113701755d6bf9d63ebe2a3
+size 167

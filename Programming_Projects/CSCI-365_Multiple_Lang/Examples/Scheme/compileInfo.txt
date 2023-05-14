@@ -1,15 +1,3 @@
-Dr Racket 6.1.4
-Supports standards from R5RS and R6RS (Revised # Reports on the Algorithmic Language Scheme)
-
-To run a Racket (Scheme) program
-drracket sourceFile.rkt
-
-To run a program interactively
-drracket
-
-
-
-
-
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b545f210ca5eb8c3b9ee6271514df6a2d988326103c06693ad0bc165959ff4e
+size 215

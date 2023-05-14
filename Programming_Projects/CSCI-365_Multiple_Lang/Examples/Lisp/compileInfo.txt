@@ -1,10 +1,3 @@
-GNU Lisp 2.49.9
-Implements ANSI Common Lisp
-
-To run a lisp program
-clisp sourceFile.lsp
-
-
-
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b102ae64b3a5cc19c60825e863577a147bb1c9b5a35d46ef2a854aa469a5711
+size 93

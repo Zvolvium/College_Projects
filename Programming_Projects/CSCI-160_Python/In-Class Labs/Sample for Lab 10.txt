@@ -1,10 +1,3 @@
-one:ein
-two:zwei
-three:drei
-four:vier
-five:funf
-six:sechs
-seven:sieben
-eight:acht
-nine:neun
-ten:zehn
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0d34aec9de99f1ff69c52fa4fbe931d8fc17876f0a68dcffae1ae63a36ed09e
+size 100

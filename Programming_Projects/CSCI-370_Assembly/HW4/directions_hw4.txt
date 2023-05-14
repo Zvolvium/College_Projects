@@ -1,24 +1,3 @@
-HW-4		CS370	10 points	Due: Monday, 2/14/2022
-
-Write a C program that prompts the user for a HEX value (assume
-8 alpha-numeric characters at most), then converts that value 
-into decimal and displays the result, and that converts the 
-decimal value into binary and displays the result.
-
-Example:
---------
-Enter your HEX value: 1A2B3C
-
-The decimal value is: 1715004
-
-The binary value is: 110100010101100111100
-
-REQUIREMENTS:
--------------
-1. Your program must run on the Linux Mint machines in Engineering.
-2. Your full name must appear as a comment at the beginning of your program.
-3. Your source code must be named hw4-yourname.c
-4. No external libraries or templates may be used (ie the 
-   HEX-decimal and decimal-binary conversion must be of your
-   own design).
-5. Failure to follow the above directions will result in loss of points.
+version https://git-lfs.github.com/spec/v1
+oid sha256:8430a49c762365d5aeaa3d41f5266b3cef4fc4c40d8a8d340b463cfd33e3b3a6
+size 839

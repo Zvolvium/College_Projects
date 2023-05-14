@@ -1,22 +1,3 @@
-HW-6		CS370	10 points	Due: Monday, 3/7/2022
-
-For this assignment we will decompile an executable file.
-
-Install RecStudioLinux.tar in your account and copy the RecCLI file
-(int the bin directory) into your 370 directory. Then CD into that 
-directory. 
-
-Create a directory called ../output as this is where the decompiled
-code will go.
-
-Now decompile the helloworld executable (from HW2) using:
-RecCLI helloworld result-yourname.asm
-
-Submit your hw6-yourname.asm result.
-
-REQUIREMENTS:
--------------
-1. Your program must run on the Linux Mint machines in Engineering.
-2. Your full name must appear as a comment at the beginning of your program.
-3. Your result code must be named hw6-yourname.asm
-4. Failure to follow the above directions will result in loss of points.
+version https://git-lfs.github.com/spec/v1
+oid sha256:bdb83626a7c3c4ddcff84eb6e4067ac4cc7309a2e979da539bd0a5c519fc240f
+size 767

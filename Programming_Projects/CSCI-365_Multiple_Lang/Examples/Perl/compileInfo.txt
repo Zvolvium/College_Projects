@@ -1,11 +1,3 @@
-Perl 5
-Implements Perl 5.20.2
-
-To run a perl program
-perl sourceFile.pl
-
-
-
-
-
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c3e7771a259629c2e628c95d3bac08e13e3f9a75b3732c77397b8b113876c4c
+size 78

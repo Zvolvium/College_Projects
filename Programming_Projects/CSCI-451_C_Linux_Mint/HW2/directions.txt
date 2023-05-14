@@ -1,30 +1,3 @@
-HW-2		CS451	20 points	Due: Sept. 19
-
-Create a program uses "system" to call "WGET" to download the file 
-(http://undcemcs01.und.edu/~ronald.marsh/CLASS/CS451/hw3-data.txt). 
-
-The program must then open and load the file into a character array. 
-However, you must assume that you do not know the size of the 
-hw3-data.txt file in advance (its size will change when we test your 
-program). Therefore, your program must somehow determine the size of 
-the file, create a dynamic array large enough, and load the data into 
-the array. As you load the array it would be wise to also convert all 
-uppercase characters to lowercase at this time. 
-
-Once you have the array populated create 2 threads (see UNIX notes on
-website). One thread must search for all occurrences of the word "easy".
-The second thread must search for all occurrences of the word "polar".
-Both threads must also display the number of occurrences of each word.
-
-* Don't forget to delete the dynamic array once you no longer need it.
-
-* While you could do this assignment without threads, doing so will 
-  cost you at least 15 points.
-
-REQUIREMENTS:
--------------
-1. Your program must run on the Linux Mint machines in Engineering.
-2. Your full name must appear as a comment at the beginning of your program.
-3. Your source code must be named hw3-yourname.c or hw3-yourname.cpp
-4. Your source MUST compile using gcc or g++ in accordance with the extension. 
-5. Failure to follow the above directions will result in loss of points.
+version https://git-lfs.github.com/spec/v1
+oid sha256:03d6ee5e82b17ddea34a5abfd6e757684a21d4dbc20d916d4e32a71888c41b9b
+size 1493

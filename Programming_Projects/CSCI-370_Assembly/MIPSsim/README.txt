@@ -1,11 +1,3 @@
-// --------------------------------------------------------
-// Written by Mason Motschke for MIPSsim
-//
-// MIPSsim.c and MIPSsim.h files within this directory ->
-// Just need to be compiled into an executable file ->
-// For use.
-//
-// If executable is needed look in HW directory first ->
-// If not there compile new executable for HW directory ->
-// Then move executable into needed directory and run.
-// --------------------------------------------------------
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4f367b1673f2d9babbbaea6e767dea9c5ea148d71c53399d559ef276b31854b
+size 463

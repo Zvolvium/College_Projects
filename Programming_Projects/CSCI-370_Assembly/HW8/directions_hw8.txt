@@ -1,34 +1,3 @@
-HW-8		CS370	10 points	Due: Monday, 3/28/2022
-
-Use my MIPS simulator to write a program that counts from A to B. You must 
-prompt the user for a starting number by displaying:
-
-Please enter a number: 
-
-Your code must then count, by 1, from the number (N) entered to N+10 and display 
-that result, 1 number per line:
-
-2
-3
-4
-...
-
-
-Notes:
-You must use a loop for the incrementing.
-
-You must also hold for a key press before terminating the program. 
-
-You cannot change the MIPSsim code in anyway.
-
-You can compile MIPSsim.c using gcc MIPSsim.c
-
-If the number becomes greater than 9, you can just print out the applicable
-ascii character(s), which would be :;<=> etc (see an ascii character table).
-
-REQUIREMENTS:
--------------
-1. Your program must run on the Linux Mint machines in Engineering.
-3. Your source code must be named hw8-yourname.mips
-4. Your source MUST excute using the MIPSsim program (./MIPSsim hw8-yourname.mips). 
-5. Failure to follow the above directions will result in loss of points.
+version https://git-lfs.github.com/spec/v1
+oid sha256:df848cd8fa5772dfc95583da932631744dd79cc3e1cdf137acfebc8592de82fb
+size 1000

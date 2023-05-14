@@ -1,20 +1,3 @@
-Eye have a spelling chequer,
-It came with my Pea Sea.
-It plane lee marks four my revue,
-Miss Steaks I can knot sea.
-Eye strike the quays and type a whirred,
-And weight four it two say,
-Weather eye am write oar wrong,
-It tells me straight aweigh.
-Eye ran this poem threw it,
-Your shore real glad two no.
-Its vary polished in its weigh.
-My chequer tolled me sew.
-A chequer is a bless thing,
-It freeze yew lodes of thyme.
-It helps me right all stiles of righting,
-And aides me when eye rime.
-Each frays come posed up on my screen,
-Eye trussed too bee a joule.
-The chequer pours over every word,
-Two cheque sum spelling rule.
+version https://git-lfs.github.com/spec/v1
+oid sha256:9df1eae8c18a045753509ff4904d919efd4187790515b6fa85f01ccb89a9f854
+size 621
