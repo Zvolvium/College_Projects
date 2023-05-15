@@ -1,3 +1,5 @@
+// Mason Motschke - CSCI 364
+
 #include <algorithm>    // min, max
 #include <fstream>
 #include <iostream>
