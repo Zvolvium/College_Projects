@@ -45,9 +45,9 @@ int main (int argc, char *argv[]){
     if (!checkArgs(argc, argv)){ return 0; }
     int argVal = stoi(argv[1]);
     printf("\n -- Found Command Line Argument: %d\n", argVal);
-    long res = add(argVal);
+    long long res = add(argVal);
 
-    long tres = 0;
+    long long tres = 0;
     double start = -1, end = -1;
 
     start = omp_get_wtime();

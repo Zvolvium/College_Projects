@@ -51,6 +51,24 @@ void convert_avg(int *in, int *out, int height, int width) {
     }
 }
 
+__global__ void device_av(int n, int *rgb, int *bw, int width){
+  //printf("Hello\n");
+  int i = blockIdx.x * blockDim.x + threadIdx.x;
+  if (i < n){
+    for (int col = 0; col < width; col++) {
+      int rgb_index = 3 * i * width + col;
+
+      int red = rgb[rgb_index];
+      int green = rgb[rgb_index + 1];
+      int blue = rgb[rgb_index + 2];
+
+      int grey = (red + green + blue) / 3;
+      int grey_index = i * width + col;
+      bw[grey_index] = grey;
+    }    
+  }
+}
+
 void write_bwfile(std::string filename, int *bw_data, int height, int width) {
     std::ofstream ofs(filename, std::ofstream::out);
 
@@ -89,19 +107,39 @@ int main(int argc, char *argv[]) {
     cout << "WIDTH: " << WIDTH << endl;
 
     // create data structures
+
+    // - GPU
+    int n = HEIGHT;
+
     int *rgb_data = new int[HEIGHT * WIDTH * 3];        // 3 the for red, green, and blue values
     int *bw_data = new int[HEIGHT * WIDTH];
 
     // load rgb data from file
     load_rgbfile(infile, rgb_data, HEIGHT, WIDTH);
+    
+    // - GPU
+    int *drgb, *dbw;
+    cudaMalloc(&drgb, sizeof(int) * HEIGHT * WIDTH * 3);
+    cudaMalloc(&dbw, sizeof(int) * HEIGHT * WIDTH);
+
+    cudaMemcpy(drgb, rgb_data, sizeof(int) * HEIGHT * WIDTH * 3, cudaMemcpyHostToDevice);
 
     // convert rgb to greyscale using the "average" method
-    convert_avg(rgb_data, bw_data, HEIGHT, WIDTH);
+    //convert_avg(rgb_data, bw_data, HEIGHT, WIDTH);
+
+    device_av<<<32, 94>>>(n, drgb, dbw, WIDTH);
+    cudaDeviceSynchronize();
 
     // write greyscale data to file
+    cudaMemcpy(bw_data, dbw, sizeof(int) * HEIGHT * WIDTH, cudaMemcpyDeviceToHost);
     write_bwfile(outfile, bw_data, HEIGHT, WIDTH);
 
     // free memory
+
+    // - GPU
+    cudaFree(drgb);
+    cudaFree(dbw);
+
     delete []rgb_data;
     delete []bw_data;
 }
