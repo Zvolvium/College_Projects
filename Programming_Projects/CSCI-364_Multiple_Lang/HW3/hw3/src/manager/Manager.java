@@ -75,14 +75,25 @@ public class Manager {
 			try {
 				BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-				// while not end of file
-				// 		read a line from input filename
-				// 		create a TextMessage object based on that line
-				// 		send the TextMessage object to the data queue
-				// 		read the response from the worker queue
-				// 		determine the type of Worker objects
-				// 		call getWorkResults
-				// 		print task id and results to console
+			    String line = bufferedReader.readLine();
+				while (line != null){
+					TestMessage message = session.createTextMessage();
+					message.setText(line);
+					producer.send(message);
+
+					Message message = consumer.onMessage();
+
+					if (message instanceof String){
+						String text = message.getText();
+						String []txt;
+						txt = text.strip().split(" ");
+						System.out.printf("Task ID: %s\nWork Results: %s\n", txt[0], txt[1]);
+
+					}
+
+					line = bufferedReader.readLine();
+				}
+				bufferedReader.close();
 
 			} catch (Exception e) {
 				e.printStackTrace();

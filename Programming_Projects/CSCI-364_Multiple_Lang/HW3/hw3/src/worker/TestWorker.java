@@ -20,6 +20,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 import api.BrokerConfig;
 import api.PrimeChecker;
+import api.Worker;
 
 /**
  *
@@ -46,19 +47,28 @@ public class TestWorker {
 			connection.start();
 
 			while (true) {
-				// receive message from data queue
-				Message message = consumer.receive();
+				Message message = consumer.onMessage();
 
-				// depending on the type of Message (do not assume it is a TextMessage)
-				// if TextMessage object contains "done", then break
-				// retrieve the task id and values from TextMessage
-				// instantiate an appropriate Worker subclass object
-				// call doWork
-				// create an ObjectMessage object
-				// send ObjectMessage to worker queue
+				if (message.contains("done")){ break; }
 
+				String []values;
+				String text = message.getText();
+				values = text.strip().split(" ");
+				int taskID = Integer.valueOf(values[0]);
+				int val = Integer.valueOf(values[1]);
+				
+				PrimeChecker work = new PrimeChecker(taskID, val);
+
+				work.doWork();
+
+				TextMessage text = session.createTextMessage();
+				text.setText(""+work.getTaskId()+" "+work.getWorkResults());
+
+				producer.send(text);
+			}
 			connection.close();
-		} catch (JMSException e) {
+		}
+		catch (JMSException e) {
 			e.printStackTrace();
 		}
 
