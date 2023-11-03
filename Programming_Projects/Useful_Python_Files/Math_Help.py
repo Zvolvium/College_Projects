@@ -53,7 +53,7 @@ def Modulo():
 
 def Factorial(n):
     # Finds the Factorial of Any Non-Negative Numbers, Auto-Casts to 'int' in Case of 'float';
-    # Returns '-1' on Negative Number. Handles up to 2464 factorial
+    # Returns '-1' on Negative Number. Handles up to 1558 factorial
 
     if (isinstance(n, float)): n = int(n);
     if (n < 0): print("\n--- Error: Negative Factorial Value Entered"); return -1;
